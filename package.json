@@ -1,0 +1,23 @@
+{
+  "name": "form-filler-backend",
+  "version": "1.0.0",
+  "description": "backend for the form-filler app",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "json",
+    "database"
+  ],
+  "author": "Amer Tricic",
+  "license": "ISC",
+  "dependencies": {
+    "db-local": "^3.1.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
