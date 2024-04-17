@@ -4,6 +4,7 @@
   "description": "backend for the form-filler app",
   "main": "src/server.js",
   "scripts": {
+    "db": "nodemon src/models/index",
     "dev": "nodemon src/server"
   },
   "keywords": [
