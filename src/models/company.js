@@ -5,7 +5,7 @@ const dbPath = dbConfig.path;
 const { Schema } = new dbLocal({ path: dbPath });
 
 const companySchema = {
-  _id: { type: Number, required: true },
+  _id: { type: String, required: true },
   companyId: { type: Number, required: true },
   companyTaxId: { type: Number, required: false },
   companyFullName: { type: String, required: true },
@@ -20,6 +20,7 @@ const companySchema = {
     phone: { type: String, required: false },
     email: { type: String, required: false },
   },
+  createdAt: { type: String, required: true },
 };
 
 const Company = Schema("Company", companySchema);
