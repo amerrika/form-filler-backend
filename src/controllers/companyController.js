@@ -1,5 +1,17 @@
+const db = require("../models/index");
+const Company = db.companies;
+const { v4: uuid } = require("uuid");
+
 const getAllCompanies = (req, res) => {
-  res.send("get all companies using find()");
+  try {
+    const data = Company.find();
+    res.send(data);
+  } catch (error) {
+    res.status(500).send({
+      message: "Error happened while getting all companies",
+    });
+    console.log("Error happened while getting all companies!", error);
+  }
 };
 
 const getOneCompany = (req, res) => {
@@ -7,7 +19,38 @@ const getOneCompany = (req, res) => {
 };
 
 const createNewCompany = (req, res) => {
-  res.send("new company added using save()");
+  try {
+    // get data from client: req.body
+    const companyData = {
+      companyId: 42663,
+      companyTaxId: 2663,
+      companyFullName: "Company City Full Name",
+      companyShortName: "Company Short Name",
+      companyType: "doo",
+      companyOffice: {
+        city: "Cazin",
+        street: "Ulica",
+        streetNumber: "bb",
+      },
+      companyContact: {
+        phone: "+98869696",
+        email: "company@company.at",
+      },
+    };
+    Company.create({
+      ...companyData,
+      _id: uuid(),
+      createdAt: new Date().toLocaleString("en-GB"),
+    }).save();
+    res.send({
+      message: "New company was created",
+    });
+  } catch (error) {
+    res.status(500).send({
+      message: "Error happened when creating new company",
+    });
+    console.log("Error happened when creating new company!", error);
+  }
 };
 
 const updateOneCompany = (req, res) => {
