@@ -1,4 +1,4 @@
 const db = {};
-db.companies = require("./company.js")
+db.companies = require("./company")
 
 module.exports = db;
