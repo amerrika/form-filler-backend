@@ -1,11 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const companyController = require("../controllers/companyController");
 
-router.get("/", console.log("get all companies"));
-router.get("/:id", console.log("get existing company"));
-router.post("/", console.log("create new company"));
-router.put("/:id", console.log("update exisiting company"));
-router.delete("/:id", console.log("delete existing company"));
-router.delete("/", console.log("delete all companies"));
+router.get("/", companyController.getAllCompanies);
+router.get("/:id", companyController.getOneCompany);
+router.post("/", companyController.createNewCompany);
+router.put("/:id", companyController.updateOneCompany);
+router.delete("/:id", companyController.deleteOneCompany);
+router.delete("/", companyController.deleteAllCompanies);
 
 module.exports = router;
