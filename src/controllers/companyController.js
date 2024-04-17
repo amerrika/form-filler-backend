@@ -15,7 +15,16 @@ const getAllCompanies = (req, res) => {
 };
 
 const getOneCompany = (req, res) => {
-  res.send("get one company using find(id)");
+  try {
+    const id = req.params.id;
+    const data = Company.find(id);
+    res.send(data);
+  } catch (error) {
+    res.status(500).send({
+      message: "Error happened while getting a company",
+    });
+    console.log(`Error happened while getting a company with id: ${id}`, error);
+  }
 };
 
 const createNewCompany = (req, res) => {
