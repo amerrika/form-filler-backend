@@ -63,11 +63,33 @@ const createNewCompany = (req, res) => {
 };
 
 const updateOneCompany = (req, res) => {
-  console.log("update a company using update(id)");
+  try {
+    const id = req.params.id;
+    Company.update(id).save();
+    res.send({
+      message: "Company was sucessfully updated",
+    });
+  } catch (error) {
+    res.status(500).send({
+      message: "Error happened while updating company",
+    });
+    console.log(`Error happened while updating company with id: ${id}`, error);
+  }
 };
 
 const deleteOneCompany = (req, res) => {
-  console.log("delete a company using remove(id)");
+  try {
+    const id = req.params.id;
+    Company.remove(id);
+    res.send({
+      message: "Company was sucessfully deleted",
+    });
+  } catch (error) {
+    res.status(500).send({
+      message: "Error happened while deleting company",
+    });
+    console.log(`Error happened while deleting company with id: ${id}`, error);
+  }
 };
 
 const deleteAllCompanies = (req, res) => {
