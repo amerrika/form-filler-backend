@@ -35,6 +35,7 @@ const createNewCompany = (req, res) => {
       companyTaxId: 2663,
       companyFullName: "Company City Full Name",
       companyShortName: "Company Short Name",
+      companyDirector: "Nepoznato Ime",
       companyType: "doo",
       companyOffice: {
         city: "Cazin",
