@@ -7,10 +7,12 @@ const { Schema } = new dbLocal({ path: dbPath });
 const companySchema = {
   _id: { type: String, required: true },
   companyId: { type: Number, required: true },
+  companyIsTaxPayer: { type: Boolean, required: true },
   companyTaxId: { type: Number, required: false },
   companyFullName: { type: String, required: true },
   companyShortName: { type: String, required: true },
   companyType: { type: String, required: true },
+  companyDirector: { type: String, required: true },
   companyOffice: {
     city: { type: String, required: true },
     street: { type: String, required: true },
