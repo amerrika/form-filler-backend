@@ -1,1 +1,59 @@
-[]
+[
+    {
+        "_id": "18479d87-77f6-4e45-b2ec-1796b93f30d0",
+        "companyId": 42663,
+        "companyIsTaxPayer": true,
+        "companyTaxId": 2663,
+        "companyFullName": "Company City Full Name",
+        "companyShortName": "Company Short Name",
+        "companyType": "doo",
+        "companyOffice": {
+            "city": "Cazin",
+            "street": "Ulica",
+            "streetNumber": "bb"
+        },
+        "companyContact": {
+            "phone": "+98869696",
+            "email": "company@company.at"
+        },
+        "createdAt": "17/04/2024, 18:48:38"
+    },
+    {
+        "_id": "18479d87-77f6-4e45-b2ec-1796b93f30e0",
+        "companyId": 42663,
+        "companyIsTaxPayer": true,
+        "companyTaxId": 2663,
+        "companyFullName": "Company City Full Name",
+        "companyShortName": "Company Short Name",
+        "companyType": "doo",
+        "companyOffice": {
+            "city": "Cazin",
+            "street": "Ulica",
+            "streetNumber": "bb"
+        },
+        "companyContact": {
+            "phone": "+98869696",
+            "email": "company@company.at"
+        },
+        "createdAt": "17/04/2024, 18:48:38"
+    },
+    {
+        "_id": "18479d67-77f6-4e45-b2ec-1796b93f30d0",
+        "companyId": 42663,
+        "companyIsTaxPayer": true,
+        "companyTaxId": 2663,
+        "companyFullName": "Company City Full Name",
+        "companyShortName": "Company Short Name",
+        "companyType": "doo",
+        "companyOffice": {
+            "city": "Cazin",
+            "street": "Ulica",
+            "streetNumber": "bb"
+        },
+        "companyContact": {
+            "phone": "+98869696",
+            "email": "company@company.at"
+        },
+        "createdAt": "17/04/2024, 18:48:38"
+    }
+]
