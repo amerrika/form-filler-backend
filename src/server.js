@@ -12,6 +12,9 @@ const PORT = 3030;
 // Middleware
 app.use(cors());
 
+// parse requests of content-type - application/json
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Working");
 });
