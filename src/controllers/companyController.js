@@ -29,26 +29,11 @@ const getOneCompany = (req, res) => {
 
 const createNewCompany = (req, res) => {
   try {
-    // get data from client: req.body
-    const companyData = {
-      companyId: 42663,
-      companyTaxId: 2663,
-      companyFullName: "Company City Full Name",
-      companyShortName: "Company Short Name",
-      companyDirector: "Nepoznato Ime",
-      companyType: "doo",
-      companyOffice: {
-        city: "Cazin",
-        street: "Ulica",
-        streetNumber: "bb",
-      },
-      companyContact: {
-        phone: "+98869696",
-        email: "company@company.at",
-      },
-    };
+    console.log(req)
+    const data = req.body;
+
     Company.create({
-      ...companyData,
+      ...data,
       _id: uuid(),
       createdAt: new Date().toLocaleString("en-GB"),
     }).save();
@@ -57,9 +42,9 @@ const createNewCompany = (req, res) => {
     });
   } catch (error) {
     res.status(500).send({
-      message: "Error happened when creating new company",
+      message: "Error happened when creating a new company",
     });
-    console.log("Error happened when creating new company!", error);
+    console.log("Error happened when creating a new company!", error);
   }
 };
 
